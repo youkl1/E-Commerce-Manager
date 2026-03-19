@@ -1,0 +1,141 @@
+@import './variables.scss';
+
+// 全局样式
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+  font-size: $font-size-base;
+  color: $text-color-primary;
+  background-color: $bg-color;
+  line-height: 1.5;
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $bg-color-light;
+  border-radius: $border-radius-small;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $border-color-dark;
+  border-radius: $border-radius-small;
+  transition: all 0.3s;
+
+  &:hover {
+    background: $text-color-placeholder;
+  }
+}
+
+// 布局容器
+.app-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+// 页面容器
+.page-container {
+  flex: 1;
+  padding: $spacing-lg;
+  overflow-y: auto;
+  background-color: $bg-color;
+}
+
+// 卡片样式
+.card {
+  background-color: $bg-color-page;
+  border-radius: $border-radius-base;
+  box-shadow: $box-shadow;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-lg;
+}
+
+// 标题样式
+.page-title {
+  font-size: $font-size-xl;
+  font-weight: 600;
+  margin-bottom: $spacing-lg;
+  color: $text-color-primary;
+}
+
+// 表单样式
+.form-item {
+  margin-bottom: $spacing-md;
+}
+
+// 按钮组样式
+.btn-group {
+  display: flex;
+  gap: $spacing-sm;
+  margin-top: $spacing-lg;
+}
+
+// 表格样式
+.table-container {
+  margin-top: $spacing-md;
+}
+
+// 分页样式
+.pagination {
+  margin-top: $spacing-lg;
+  display: flex;
+  justify-content: flex-end;
+}
+
+// 加载状态
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+// 空状态
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  color: $text-color-secondary;
+
+  .empty-icon {
+    font-size: 64px;
+    margin-bottom: $spacing-md;
+  }
+
+  .empty-text {
+    font-size: $font-size-base;
+  }
+}
+
+// 错误状态
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  color: $danger-color;
+
+  .error-icon {
+    font-size: 64px;
+    margin-bottom: $spacing-md;
+  }
+
+  .error-text {
+    font-size: $font-size-base;
+  }
+}
