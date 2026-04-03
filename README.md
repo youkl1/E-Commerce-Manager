@@ -1,6 +1,6 @@
 # E-Commerce-Manager
 企业级电商业务后台管理系统
-
+演示地址：http://youkailong.cn:5176/login
 ## 项目简介
 E-Commerce-Manager是一个基于Vue 3和TypeScript开发的企业级电商后台管理系统，旨在为电商行业提供全流程的后台管理能力，通过直观的界面和高效的操作提升管理效率。
 
